@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat Widget</title>
+    <link rel="stylesheet" href="./widget.css" />
+  </head>
+  <body>
+    <!-- If iframed, this container will be used by widget.js -->
+    <div id="cw-root"></div>
+
+    <!-- Configure the widget when served as a standalone page/iframe -->
+    <script>
+      window.CW_BOOT = {
+        apiBase: "http://localhost:5001", // e.g. https://api.yourdomain.com
+        wsBase: "ws://localhost:5001/", // e.g. wss://ws.yourdomain.com
+        position: "right", // "left" or "right"
+        chatbot_id: "your_chatbot_id", // Replace with your actual chatbot ID
+        user_id: "your_user_id", // Replace with your actual user ID
+      };
+    </script>
+    <script src="./widget.js"></script>
+  </body>
+</html>

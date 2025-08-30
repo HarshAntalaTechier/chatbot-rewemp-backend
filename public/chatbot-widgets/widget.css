@@ -1,0 +1,126 @@
+:root {
+  --cw-primary: #4f46e5;
+  --cw-bg: #ffffff;
+  --cw-muted: #f6f7fb;
+  --cw-text: #0f172a;
+  --cw-border: #e5e7eb;
+  --cw-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Floating button */
+.cw-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--cw-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 22px/1 ui-sans-serif, system-ui, Arial;
+  cursor: pointer;
+  z-index: 2147483647;
+  box-shadow: var(--cw-shadow);
+  user-select: none;
+}
+
+/* Popup */
+.cw-wrap {
+  position: fixed;
+  bottom: 86px;
+  right: 20px;
+  width: 360px;
+  height: 520px;
+  background: var(--cw-bg);
+  border: 1px solid var(--cw-border);
+  border-radius: 16px;
+  box-shadow: var(--cw-shadow);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 2147483647;
+  font: 400 14px/1.4 ui-sans-serif, system-ui, Arial;
+  color: var(--cw-text);
+}
+
+/* Header */
+.cw-head {
+  background: var(--cw-primary);
+  color: #fff;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+/* Body: form + chat */
+.cw-form,
+.cw-chat {
+  padding: 12px;
+}
+
+.cw-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--cw-border);
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+.cw-btn-primary {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--cw-primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cw-msgs {
+  height: 360px;
+  background: var(--cw-muted);
+  border: 1px solid var(--cw-border);
+  border-radius: 12px;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cw-bot,
+.cw-user {
+  max-width: 80%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--cw-border);
+  background: #fff;
+  color: var(--cw-text);
+  word-wrap: break-word;
+}
+
+.cw-user {
+  align-self: flex-end;
+  background: var(--cw-primary);
+  color: #fff;
+  border: none;
+}
+
+.cw-row {
+  display: flex;
+  gap: 6px;
+  padding-top: 8px;
+}
+
+.cw-row .cw-input {
+  margin: 0;
+  flex: 1;
+}
