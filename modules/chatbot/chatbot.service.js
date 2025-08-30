@@ -177,9 +177,9 @@ async function crawlWebsiteServices(data) {
 `,
     });
 
-    await trainChatbotService({
-      chatbot_id: createChatbot.dataValues.chatbot_id,
-    });
+    // await trainChatbotService({
+    //   chatbot_id: createChatbot.dataValues.chatbot_id,
+    // });
     return ResponseHelpers.serviceToController(
       1,
       createChatbot.dataValues,
@@ -303,9 +303,9 @@ const trainChatbotUsingtextFileService = async (data) => {
         "Failed to create chatbot"
       );
     }
-    await trainChatbotService({
-      chatbot_id: createChatbot.dataValues.chatbot_id,
-    });
+    // await trainChatbotService({
+    //   chatbot_id: createChatbot.dataValues.chatbot_id,
+    // });
   } catch (error) {
     console.error("❌ Error:", error);
     return ResponseHelpers.serviceToController(
