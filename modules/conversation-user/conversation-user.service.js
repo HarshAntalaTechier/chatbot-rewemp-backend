@@ -32,6 +32,26 @@ const createConversationUserService = async (data) => {
   }
 };
 
+const getConversationUserByIdService = async (data) => {
+  try {
+    const { chatbot_id } = data;
+    const ConversationUser = await ConversationUserModel.findAll({
+      where: { chatbot_id: chatbot_id },
+    });
+    if (ConversationUser) {
+      return ResponseHelpers.serviceToController(
+        1,
+        ConversationUser,
+        "Conversation user retrieved successfully"
+      );
+    }
+  } catch (error) {
+    console.error("Error retrieving conversation user service:", error);
+    throw new Error("Failed to retrieve conversation user service");
+  }
+};
+
 module.exports = {
   createConversationUserService,
+  getConversationUserByIdService,
 };
